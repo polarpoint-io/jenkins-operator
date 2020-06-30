@@ -18,6 +18,12 @@ jobs:
       - name: Set up Go 1.14.x
         uses: actions/setup-go@v1
         with:
-          go-version: 1.14          
-      - name: Run Makefile
+          go-version: 1.14
+      - name: dependencies
+        run: make go-dependencies   
+        
+      - name: verify
+        run: make verify  
+
+      - name: make all
         run: make all    
