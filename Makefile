@@ -300,7 +300,7 @@ HAS_CHECKMAKE := $(shell which checkmake)
 checkmake: ## Check this Makefile
 	@echo "+ $@"
 ifndef HAS_CHECKMAKE
-	GOBIN=$PWD/bin go get -u github.com/mrtazz/checkmake
+	$GOPATH/bin go get -u github.com/mrtazz/checkmake
 endif
 	@checkmake Makefile
 
