@@ -36,11 +36,11 @@ jobs:
           sudo mv operator-sdk-v0.15.2-x86_64-linux-gnu /usr/local/bin/operator-sdk
           sudo chmod +x /usr/local/bin/operator-sdk
           make build 
-      - uses: actions/checkout@master         
-      - name: bump version and push tag
-        uses: mathieudutour/github-tag-action@v4.5
-        with:
-          github_token: ${{ secrets.GH_TOKEN }}
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@1.17.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          WITH_V: true        
       - name: helm 
         run: |
           wget https://github.com/operator-framework/operator-sdk/releases/download/v0.15.2/operator-sdk-v0.15.2-x86_64-linux-gnu
