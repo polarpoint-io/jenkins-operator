@@ -25,7 +25,7 @@ jobs:
       - name: dependencies
         run: |
           make go-dependencies   
-          go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
+          GO111MODULE=on go get github.com/golangci/golangci-lint/cmd/golangci-lint@v1.26.0
       - name: verify
         run: make verify  
 
