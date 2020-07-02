@@ -23,8 +23,9 @@ jobs:
         with:
           fetch-depth: 1
       - name: dependencies
-        run: make go-dependencies   
-        
+        run: |
+          make go-dependencies   
+          go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
       - name: verify
         run: make verify  
 
