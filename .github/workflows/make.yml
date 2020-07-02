@@ -40,6 +40,5 @@ jobs:
         shell: bash
       - name: all
         run: |
-          GOBIN=$PWD/bin 
           make all
   
