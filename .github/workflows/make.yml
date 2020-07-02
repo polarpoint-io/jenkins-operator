@@ -22,10 +22,8 @@ jobs:
         uses: actions/checkout@v1
         with:
           fetch-depth: 1
-      - name: dependencies
+      - name: all
         run: |
           GOBIN=$PWD/bin 
-          make go-dependencies   
-          GO111MODULE=on go get github.com/golangci/golangci-lint/cmd/golangci-lint@v1.26.0
           make all
   
