@@ -24,10 +24,8 @@ jobs:
           fetch-depth: 1
       - name: dependencies
         run: |
+          GOBIN=$PWD/bin 
           make go-dependencies   
           GO111MODULE=on go get github.com/golangci/golangci-lint/cmd/golangci-lint@v1.26.0
-      - name: release
-        run: make release  
-
-      - name: make all
-        run: make all    
+          make all
+  
