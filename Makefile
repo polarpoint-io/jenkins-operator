@@ -507,7 +507,7 @@ helm-package:
 .PHONY: helm-deploy
 helm-deploy: helm-package
 	@echo "+ $@"
-	helm repo index chart/ --url https://raw.githubusercontent.com/jenkinsci/kubernetes-operator/master/chart/jenkins-operator/
+	helm repo index chart/ --url https://raw.githubusercontent.com/polarpoint-io/jenkins-operator/master/chart/jenkins-operator/
 	cd chart/ && mv jenkins-operator-*.tgz jenkins-operator
 
 .PHONY: generate-docs
