@@ -215,7 +215,7 @@ ifndef HAS_STATICCHECK
 	wget -O staticcheck_$(PLATFORM)_amd64.tar.gz https://github.com/dominikh/go-tools/releases/download/2020.1.3/staticcheck_$(PLATFORM)_amd64.tar.gz
 	tar zxvf staticcheck_$(PLATFORM)_amd64.tar.gz
 	mkdir -p $(GOPATH)/bin
-	mv staticcheck/staticcheck $(GOPATH)/bin
+	sudo mv staticcheck/staticcheck $(GOPATH)/bin
 endif
 	@staticcheck $(PACKAGES)
 
