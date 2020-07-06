@@ -1,5 +1,5 @@
 
-name: make CI
+name: CI
 
 on:
   push:
