@@ -511,6 +511,8 @@ helm-deploy: helm-package
 	cd ../ 
 	helm repo index chart/ --url https://raw.githubusercontent.com/polarpoint-io/jenkins-operator/master/chart/jenkins-operator/
 	cp /home/runner/work/jenkins-operator/jenkins-operator/chart/*.tgz chart/jenkins-operator
+	git config user.name "${GITHUB_ACTOR}"
+        git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 	git add chart/jenkins-operator/*
 	git commit -vaem "Helm deploy"
 	git push origin 
