@@ -501,14 +501,14 @@ helm-package:
 	mkdir -p /tmp/jenkins-operator-charts
 	mv chart/jenkins-operator/*.tgz /tmp/jenkins-operator-charts
 	cd chart && helm package jenkins-operator
-	mv /home/runner/work/jenkins-operator/jenkins-operator/chart/*.tgz chart/jenkins-operator/
+	cp /home/runner/work/jenkins-operator/jenkins-operator/chart/*.tgz chart/jenkins-operator/
 
 
 .PHONY: helm-deploy
 helm-deploy: helm-package
 	@echo "+ $@"
 	helm repo index chart/ --url https://raw.githubusercontent.com/polarpoint-io/jenkins-operator/master/chart/jenkins-operator/
-	mv /home/runner/work/jenkins-operator/jenkins-operator/chart/*.tgz jenkins-operator
+	cp /home/runner/work/jenkins-operator/jenkins-operator/chart/*.tgz jenkins-operator
 
 .PHONY: generate-docs
 generate-docs: ## Re-generate docs directory from the website directory
