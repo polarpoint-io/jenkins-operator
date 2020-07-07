@@ -508,7 +508,7 @@ helm-package:
 helm-deploy: helm-package
 	@echo "+ $@"
 	helm repo index chart/ --url https://raw.githubusercontent.com/polarpoint-io/jenkins-operator/master/chart/jenkins-operator/
-	cd chart/ && mv jenkins-operator-*.tgz jenkins-operator
+	mv /home/runner/work/jenkins-operator/jenkins-operator/chart/*.tgz jenkins-operator
 
 .PHONY: generate-docs
 generate-docs: ## Re-generate docs directory from the website directory
