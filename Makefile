@@ -501,8 +501,8 @@ helm-package:
 	mkdir -p /tmp/jenkins-operator-charts
 	mv chart/jenkins-operator/*.tgz /tmp/jenkins-operator-charts
 	cd chart && helm package jenkins-operator
-	mv /tmp/jenkins-operator-charts/*.tgz chart/jenkins-operator/
-	rm -rf /tmp/jenkins-operator-charts/
+	mv /home/runner/work/jenkins-operator/jenkins-operator/chart/*.tgz chart/jenkins-operator/
+
 
 .PHONY: helm-deploy
 helm-deploy: helm-package
