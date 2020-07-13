@@ -514,7 +514,7 @@ helm-deploy: helm-package
 	git config user.name "${GITHUB_ACTOR}"
 	git config user.email "surj@polarpoint.io"
 	git add chart/jenkins-operator/*
-	git commit -vaem "Helm deploy"
+	git commit -m "Helm deploy"
 	@echo "Run make tag to create and push the tag for new version $(NEW_VERSION)"	
 
 .PHONY: generate-docs
