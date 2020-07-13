@@ -40,7 +40,7 @@ endif
 VERSION_TAG := $(VERSION)
 LATEST_TAG := latest
 BUILD_TAG := $(GITBRANCH)-$(GITCOMMIT)
-
+GIT_MERGE_AUTOEDIT := no
 BUILD_PATH := ./cmd/manager
 
 # CONTAINER_RUNTIME_COMMAND is Container Runtime - it could be docker or podman
