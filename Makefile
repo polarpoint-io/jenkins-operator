@@ -454,7 +454,7 @@ tag: ## Create a new git tag to prepare to build a release
 	@echo "+ $@"
 	git config user.name "${GITHUB_ACTOR}"
 	git config user.email "surj@polarpoint.io"	
-	git tag -s -a $(VERSION) -m "$(VERSION)"
+	git tag -a $(VERSION) -m "$(VERSION)"
 	git push origin $(VERSION)
 
 .PHONY: help
