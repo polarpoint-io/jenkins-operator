@@ -515,8 +515,7 @@ helm-deploy: helm-package
 	git config user.email "surj@polarpoint.io"
 	git add chart/jenkins-operator/*
 	git commit -vaem "Helm deploy"
-	git push origin 
-	
+	@echo "Run make tag to create and push the tag for new version $(NEW_VERSION)"	
 
 .PHONY: generate-docs
 generate-docs: ## Re-generate docs directory from the website directory
